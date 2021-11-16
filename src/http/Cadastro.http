@@ -1,0 +1,47 @@
+//Teste de API REST - Cadastros
+
+@baseURL = http://localhost:4001
+@id = 6165d3ae0eea3928ee3ad826
+
+
+###
+// GET - Listar todas as cadastros
+GET {{baseURL}}/cadastros
+Content-Type: application/json
+
+###
+// GET - Lista a cadastro por ID
+GET {{baseURL}}/cadastros/{{id}}
+Content-Type: application/json
+
+###
+// DELETE - Deleta uma cadastro
+DELETE {{baseURL}}/cadastros/{{id}}
+Content-Type: application/json
+
+###
+//POST - Incluir uma nova cadastro
+POST {{baseURL}}/cadastros
+Content-Type: application/json
+
+{   
+    "nome": "",
+    "genero": "M",
+    "cidade": "Belo Horizonte",
+    "estado": "MG",
+    "status": "inativo"
+}
+
+###
+// PUT - Alterar uma cadastro
+PUT {{baseURL}}/cadastros
+Content-Type: application/json
+
+{   
+    "_id": "6165d3c80eea3928ee3ad828",
+    "nome": "Ricardo Leme",
+    "genero": "M",
+    "cidade": "Itu",
+    "estado": "SP",
+    "status": "ativo"
+}
